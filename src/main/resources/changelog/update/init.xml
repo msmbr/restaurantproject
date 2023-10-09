@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog logicalFilePath="db.changelog-1.0.xml" xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="restaurantId" author="MSambur" >
+        <createTable tableName="restaurant">
+            <column name = "id" type="INT" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="name" type="VARCHAR(200)"/>
+            <column name="city" type="VARCHAR(50)"/>
+            <column name="rating" type="VARCHAR(10)"/>
+            <column name="votes" type="INT"/>
+            <column name="price" type="INT"/>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>
